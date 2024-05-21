@@ -2,14 +2,14 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 
 const Tile = props => {
-  const [teller, setTeller] = useState(parseInt(props.startTeller));
+  const [counter, setCounter] = useState(parseInt(props.startCounter));
 
   return (
-    <TouchableOpacity style={styles.tile} activeOpacity={0.7} onPress={() => setTeller((currentTeller) => currentTeller + 1)}>
+    <TouchableOpacity style={styles.tile} activeOpacity={0.7} onPress={() => setCounter((currentCounter) => currentCounter + 1)}>
       {console.log("render " + props.title)}
       <View>
         <Text style={styles.tileHeader}>{props.title}</Text>
-        <Text style={styles.tileText}>{teller}</Text>
+        <Text style={styles.tileText}>{counter}</Text>
       </View>
     </TouchableOpacity>
   );

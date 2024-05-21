@@ -7,14 +7,15 @@ export default function App() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.tilesContainer}>
-        <Tile title="tile one" startTeller="2" />
-        <Tile title="tile two" startTeller="2" />
-        <Tile title="tile three" startTeller="2" />
-        <Tile title="tile four" startTeller="8" />
-        <Tile title="tile five" startTeller="20" />
-        <Tile title="tile six" startTeller="0" />
-        <Tile title="tile seven" startTeller="0" />
-        <Tile title="tile eight" startTeller="0" />
+        {/* note that each component will rerender whenever it's state changes */}
+        <Tile title="tile one" startCounter="2" />
+        <Tile title="tile two" startCounter="2" />
+        <Tile title="tile three" startCounter="2" />
+        <Tile title="tile four" startCounter="8" />
+        <Tile title="tile five" startCounter="20" />
+        <Tile title="tile six" startCounter="0" />
+        <Tile title="tile seven" startCounter="0" />
+        <Tile title="tile eight" startCounter="0" />
         <StatusBar style="auto" />
       </View>
     </ScrollView >
